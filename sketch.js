@@ -32,7 +32,7 @@ let outlinec = "black"
 
 function setup(){
   if (manualstate == 0){
-    canvas = createCanvas(1665, windowHeight)
+    canvas = createCanvas(1665, 900)
     background(220)
 
     ptslider = createSlider(1, 150, 10, 1)
@@ -61,7 +61,7 @@ function draw(){
     stroke(0)
     strokeWeight(1)
     fill(220)
-    rect(5, 60, 1655, windowHeight - 65)
+    rect(5, 60, 1655, 835)
 
     strokeWeight(0)
     fill(255)
@@ -223,7 +223,7 @@ function draw(){
     stroke(0)
     strokeWeight(1)
     noFill()
-    rect(5, 60, 1655, windowHeight - 65)
+    rect(5, 60, 1655, 835)
 
     strokeWeight(0)
     fill(255)
