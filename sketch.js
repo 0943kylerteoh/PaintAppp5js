@@ -32,7 +32,7 @@ let outlinec = "black"
 
 function setup(){
   if (manualstate == 0){
-    canvas = createCanvas(windowWidth, windowHeight)
+    canvas = createCanvas(1665, windowHeight)
     background(220)
 
     ptslider = createSlider(1, 150, 10, 1)
@@ -61,7 +61,7 @@ function draw(){
     stroke(0)
     strokeWeight(1)
     fill(220)
-    rect(5, 60, windowWidth - 10, windowHeight - 65)
+    rect(5, 60, 1655, windowHeight - 65)
 
     strokeWeight(0)
     fill(255)
@@ -85,7 +85,7 @@ function draw(){
     text('To decrease the opacity of the colour of the pen, use the slider on the left to adjust or press "z".', 40, 210)
 
     text("To change between pen modes:", 40, 250);
-    text('     -> Click on the "Dotted Line" button for dotted lines or press "m".', 40, 270)
+    text('    -> Click on the "Dotted Line" button for dotted lines or press "m".', 40, 270)
     text('    -> Click on the "Solid Line" button for solid lines or press "m".', 40, 290)
     text('    -> Click on the "Triangle Line" button for lines made of triangles or press "m".', 40, 310)
     text('    -> Click on the "Square Line" button for lines made of squares or press "m".', 40, 330)
@@ -134,7 +134,8 @@ function draw(){
     rect(0, 0, 5, windowHeight)
     rect(windowWidth - 5, 0, 5, windowHeight)
     rect(0, windowHeight - 5, windowWidth, 5)
-    
+  }
+  
     rect(1610, 5, 50, 50)
     textAlign(LEFT)
     textSize(15)
@@ -222,7 +223,7 @@ function draw(){
     stroke(0)
     strokeWeight(1)
     noFill()
-    rect(5, 60, windowWidth - 10, windowHeight - 65)
+    rect(5, 60, 1655, windowHeight - 65)
 
     strokeWeight(0)
     fill(255)
