@@ -32,7 +32,7 @@ let outlinec = "black"
 
 function setup(){
   if (manualstate == 0){
-    canvas = createCanvas(1665, 900)
+    canvas = createCanvas(1700, 900)
     background(220)
 
     ptslider = createSlider(1, 150, 10, 1)
@@ -61,7 +61,7 @@ function draw(){
     stroke(0)
     strokeWeight(1)
     fill(220)
-    rect(5, 60, 1655, 835)
+    rect(5, 60, 1690, 835)
 
     strokeWeight(0)
     fill(255)
@@ -74,7 +74,7 @@ function draw(){
     text("Go to Canvas", 90, 95)
 
     textSize(30)
-    text("Instruction Manual to use Paint App", windowWidth / 2, 100)
+    text("Instruction Manual to use Paint App",  1700/2, 100)
 
     textSize(15)
     textAlign(LEFT)
@@ -85,7 +85,7 @@ function draw(){
     text('To decrease the opacity of the colour of the pen, use the slider on the left to adjust or press "z".', 40, 210)
 
     text("To change between pen modes:", 40, 250);
-    text('    -> Click on the "Dotted Line" button for dotted lines or press "m".', 40, 270)
+    text('     -> Click on the "Dotted Line" button for dotted lines or press "m".', 40, 270)
     text('    -> Click on the "Solid Line" button for solid lines or press "m".', 40, 290)
     text('    -> Click on the "Triangle Line" button for lines made of triangles or press "m".', 40, 310)
     text('    -> Click on the "Square Line" button for lines made of squares or press "m".', 40, 330)
@@ -130,12 +130,11 @@ function draw(){
   if (manualstate == 0){
     fill(220)
     strokeWeight(0)
-    rect(0, 0, windowWidth, 60)
-    rect(0, 0, 5, windowHeight)
-    rect(windowWidth - 5, 0, 5, windowHeight)
-    rect(0, windowHeight - 5, windowWidth, 5)
-  }
-  
+    rect(0, 0, 1700, 60)
+    rect(0, 0, 5, 900)
+    rect(1695, 0, 5, 900)
+    rect(0, 895, 1700, 5)
+    
     rect(1610, 5, 50, 50)
     textAlign(LEFT)
     textSize(15)
@@ -223,7 +222,7 @@ function draw(){
     stroke(0)
     strokeWeight(1)
     noFill()
-    rect(5, 60, 1655, 835)
+    rect(5, 60, 1690, 835)
 
     strokeWeight(0)
     fill(255)
@@ -386,7 +385,7 @@ function draw(){
     text("Triangle Line", 600, 30)
     text("Square Line", 660, 30)
     text("AirBrush", 715, 30)
-    if (shapemode == "none" && outlinemode == 0 && mouseIsPressed && mode == 0 && mouseX > 5 + ptslider.value() / 2 && pmouseX > 5 + ptslider.value() / 2 && mouseY > 60 + ptslider.value() / 2 && pmouseY > 60 + ptslider.value() / 2 && mouseX < windowWidth - (5 + ptslider.value() / 2) && pmouseX < windowWidth - (5 + ptslider.value() / 2) && mouseY < windowHeight - (5 + ptslider.value() / 2) && pmouseY < windowHeight - (5 + ptslider.value() / 2)){
+    if (shapemode == "none" && outlinemode == 0 && mouseIsPressed && mode == 0 && mouseX > 5 + ptslider.value() / 2 && pmouseX > 5 + ptslider.value() / 2 && mouseY > 60 + ptslider.value() / 2 && pmouseY > 60 + ptslider.value() / 2 && mouseX < 1700 - (5 + ptslider.value() / 2) && pmouseX < 1700 - (5 + ptslider.value() / 2) && mouseY < 900 - (5 + ptslider.value() / 2) && pmouseY < 900 - (5 + ptslider.value() / 2)){
       stroke(outlinec)
       if (shapeoutline == 1){
         strokeWeight(potslider.value())
@@ -397,12 +396,12 @@ function draw(){
       fill(c)
       ellipse(mouseX, mouseY, ptslider.value(), ptslider.value())
     }
-    else if (shapemode == "none" && outlinemode == 0 && mouseIsPressed && mode == 1 && mouseX > 5 + ptslider.value() / 2 && pmouseX > 5 + ptslider.value() / 2 && mouseY > 60 + ptslider.value() / 2 && pmouseY > 60 + ptslider.value() / 2 && mouseX < windowWidth - (5 + ptslider.value() / 2) && pmouseX < windowWidth - (5 + ptslider.value() / 2) && mouseY < windowHeight - (5 + ptslider.value() / 2) && pmouseY < windowHeight - (5 + ptslider.value() / 2)){
+    else if (shapemode == "none" && outlinemode == 0 && mouseIsPressed && mode == 1 && mouseX > 5 + ptslider.value() / 2 && pmouseX > 5 + ptslider.value() / 2 && mouseY > 60 + ptslider.value() / 2 && pmouseY > 60 + ptslider.value() / 2 && mouseX < 1700 - (5 + ptslider.value() / 2) && pmouseX < 1700 - (5 + ptslider.value() / 2) && mouseY < 900 - (5 + ptslider.value() / 2) && pmouseY < 900 - (5 + ptslider.value() / 2)){
       strokeWeight(ptslider.value())
       stroke(c)
       line(mouseX, mouseY, pmouseX, pmouseY)
     }
-    else if ( shapemode == "none" && outlinemode == 0 && mouseIsPressed && mode == 2 && mouseX > 5 + ptslider.value() * 0.86602540378 && pmouseX > 5 + ptslider.value() * 0.86602540378 && mouseY > 60 + ptslider.value() && pmouseY > 60 + ptslider.value() && mouseX < windowWidth - (5 + ptslider.value() * 0.86602540378) && pmouseX < windowWidth - (5 + ptslider.value() * 0.86602540378) && mouseY < windowHeight - (5 + ptslider.value() / 2) && pmouseY < windowHeight - (5 + ptslider.value() / 2)){
+    else if ( shapemode == "none" && outlinemode == 0 && mouseIsPressed && mode == 2 && mouseX > 5 + ptslider.value() * 0.86602540378 && pmouseX > 5 + ptslider.value() * 0.86602540378 && mouseY > 60 + ptslider.value() && pmouseY > 60 + ptslider.value() && mouseX < 1700 - (5 + ptslider.value() * 0.86602540378) && pmouseX < 1700 - (5 + ptslider.value() * 0.86602540378) && mouseY < 900 - (5 + ptslider.value() / 2) && pmouseY < 900 - (5 + ptslider.value() / 2)){
       stroke(outlinec)
       if (shapeoutline == 1){
         strokeWeight(potslider.value())
@@ -413,7 +412,7 @@ function draw(){
       fill(c)
       triangle(mouseX, mouseY - ptslider.value(), mouseX + ptslider.value() * 0.86602540378, mouseY + ptslider.value() / 2, mouseX - ptslider.value() * 0.86602540378, mouseY + ptslider.value() / 2)
     }
-    else if (shapemode == "none" && outlinemode == 0 && mouseIsPressed && mode == 3 && mouseX > 5 + ptslider.value() / 2 && pmouseX > 5 + ptslider.value() / 2 && mouseY > 60 + ptslider.value() / 2 && pmouseY > 60 + ptslider.value() / 2 && mouseX < windowWidth - (5 + ptslider.value() / 2) && pmouseX < windowWidth - (5 + ptslider.value() / 2) && mouseY < windowHeight - (5 + ptslider.value() / 2) && pmouseY < windowHeight - (5 + ptslider.value() / 2)){
+    else if (shapemode == "none" && outlinemode == 0 && mouseIsPressed && mode == 3 && mouseX > 5 + ptslider.value() / 2 && pmouseX > 5 + ptslider.value() / 2 && mouseY > 60 + ptslider.value() / 2 && pmouseY > 60 + ptslider.value() / 2 && mouseX < 1700 - (5 + ptslider.value() / 2) && pmouseX < 1700 - (5 + ptslider.value() / 2) && mouseY < 900 - (5 + ptslider.value() / 2) && pmouseY < 900 - (5 + ptslider.value() / 2)){
       stroke(outlinec)
       if (shapeoutline == 1){
         strokeWeight(potslider.value())
@@ -424,14 +423,14 @@ function draw(){
       fill(c)
       square(mouseX - ptslider.value() / 2, mouseY - ptslider.value() / 2, ptslider.value())
     }
-    else if (shapemode == "none" && outlinemode == 0 && mouseIsPressed && mode == 4 && mouseX > 5 + ptslider.value() / 2 && pmouseX > 5 + ptslider.value() / 2 && mouseY > 60 + ptslider.value() / 2 && pmouseY > 60 + ptslider.value() / 2 && mouseX < windowWidth - (5 + ptslider.value() / 2) && pmouseX < windowWidth - (5 + ptslider.value() / 2) && mouseY < windowHeight - (5 + ptslider.value() / 2) && pmouseY < windowHeight - (5 + ptslider.value() / 2)){
+    else if (shapemode == "none" && outlinemode == 0 && mouseIsPressed && mode == 4 && mouseX > 5 + ptslider.value() / 2 && pmouseX > 5 + ptslider.value() / 2 && mouseY > 60 + ptslider.value() / 2 && pmouseY > 60 + ptslider.value() / 2 && mouseX < 1700 - (5 + ptslider.value() / 2) && pmouseX < 1700 - (5 + ptslider.value() / 2) && mouseY < 900 - (5 + ptslider.value() / 2) && pmouseY < 900 - (5 + ptslider.value() / 2)){
       strokeWeight(1)
       stroke(c)
       for (let i = 0; i < pow(ptslider.value(), 2) - 1; i++){
         point(random(mouseX - ptslider.value() / 2, mouseX + ptslider.value() / 2), random(mouseY - ptslider.value() / 2, mouseY + ptslider.value() / 2))
       }
     }
-    else if (shapemode == "none" && outlinemode == 0 && mouseIsPressed && mode == 5 && mouseX > 5 && pmouseX > 5 && mouseX < windowWidth - 5 && pmouseX < windowWidth - 5 && mouseY > 60 && pmouseY > 60 && mouseY < windowHeight - 5 && pmouseY < windowHeight - 5){
+    else if (shapemode == "none" && outlinemode == 0 && mouseIsPressed && mode == 5 && mouseX > 5 && pmouseX > 5 && mouseX < 1700 - 5 && pmouseX < 1700 - 5 && mouseY > 60 && pmouseY > 60 && mouseY < 900 - 5 && pmouseY < 900 - 5){
       strokeWeight(etslider.value())
       stroke(220)
       line(mouseX, mouseY, pmouseX, pmouseY)
@@ -798,7 +797,7 @@ function mousePressed(){
       stroke(0)
       strokeWeight(1)
       fill(220)
-      rect(5, 60, windowWidth - 10, windowHeight - 65)
+      rect(5, 60, 1700 - 10, 900 - 65)
     }
   }
 
@@ -989,10 +988,10 @@ function mousePressed(){
       stroke(0)
       strokeWeight(1)
       fill(220)
-      rect(5, 60, windowWidth - 10, windowHeight - 65)
+      rect(5, 60, 1700 - 10, 900 - 65)
     }
     else if (outlinemode == 0 && mouseX > 1165 && mouseX < 1215 && mouseY > 5 && mouseY < 55 && mouseIsPressed){
-      savedrawing = canvas.get(5, 60, windowWidth - 10, windowHeight - 65)
+      savedrawing = canvas.get(5, 60, 1700 - 10, 900 - 65)
       savedrawing.save("Untitled Drawing", "jpg")
     }
 
@@ -1031,60 +1030,60 @@ function mousePressed(){
       shapeoutline = 0
     }
     
-    if (shapemode == 'triangle' && mouseIsPressed && counter == 0 && mouseX > (5 + ptslider.value()) && mouseX < windowWidth - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < windowHeight - (5 + ptslider.value())){
+    if (shapemode == 'triangle' && mouseIsPressed && counter == 0 && mouseX > (5 + ptslider.value()) && mouseX < 1700 - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < 900 - (5 + ptslider.value())){
       mousex1 = mouseX
       mousey1 = mouseY
       counter = 1
     }
-    else if (shapemode == 'triangle' && mouseIsPressed && counter == 1 && mouseX > (5 + ptslider.value()) && mouseX < windowWidth - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < windowHeight - (5 + ptslider.value())){
+    else if (shapemode == 'triangle' && mouseIsPressed && counter == 1 && mouseX > (5 + ptslider.value()) && mouseX < 1700 - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < 900 - (5 + ptslider.value())){
       mousex2 = mouseX
       mousey2 = mouseY
       counter = 2
     }
-    else if (shapemode == 'triangle' && mouseIsPressed && counter == 2 && mouseX > (5 + ptslider.value()) && mouseX < windowWidth - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < windowHeight - (5 + ptslider.value())){
+    else if (shapemode == 'triangle' && mouseIsPressed && counter == 2 && mouseX > (5 + ptslider.value()) && mouseX < 1700 - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < 900 - (5 + ptslider.value())){
       mousex3 = mouseX
       mousey3 = mouseY
       counter = 3
     }
     
-    if (shapemode == 'quad' && mouseIsPressed && counter == 0 && mouseX > (5 + ptslider.value()) && mouseX < windowWidth - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < windowHeight - (5 + ptslider.value())){
+    if (shapemode == 'quad' && mouseIsPressed && counter == 0 && mouseX > (5 + ptslider.value()) && mouseX < 1700 - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < 900 - (5 + ptslider.value())){
       mousex1 = mouseX
       mousey1 = mouseY
       counter = 1
     }
-    else if (shapemode == 'quad' && mouseIsPressed && counter == 1 && mouseX > (5 + ptslider.value()) && mouseX < windowWidth - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < windowHeight - (5 + ptslider.value())){
+    else if (shapemode == 'quad' && mouseIsPressed && counter == 1 && mouseX > (5 + ptslider.value()) && mouseX < 1700 - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < 900 - (5 + ptslider.value())){
       mousex2 = mouseX
       mousey2 = mouseY
       counter = 2
     }
-    else if (shapemode == 'quad' && mouseIsPressed && counter == 2 && mouseX > (5 + ptslider.value()) && mouseX < windowWidth - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < windowHeight - (5 + ptslider.value())){
+    else if (shapemode == 'quad' && mouseIsPressed && counter == 2 && mouseX > (5 + ptslider.value()) && mouseX < 1700 - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < 900 - (5 + ptslider.value())){
       mousex3 = mouseX
       mousey3 = mouseY
       counter = 3
     }
-    else if (shapemode == 'quad' && mouseIsPressed && counter == 3 && mouseX > (5 + ptslider.value()) && mouseX < windowWidth - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < windowHeight - (5 + ptslider.value())){
+    else if (shapemode == 'quad' && mouseIsPressed && counter == 3 && mouseX > (5 + ptslider.value()) && mouseX < 1700 - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < 900 - (5 + ptslider.value())){
       mousex4 = mouseX
       mousey4 = mouseY
       counter = 4
     }
     
-    if (shapemode == 'rect' && mouseIsPressed && counter == 0 && mouseX > (5 + ptslider.value()) && mouseX < windowWidth - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < windowHeight - (5 + ptslider.value())){
+    if (shapemode == 'rect' && mouseIsPressed && counter == 0 && mouseX > (5 + ptslider.value()) && mouseX < 1700 - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < 900 - (5 + ptslider.value())){
       mousex1 = mouseX
       mousey1 = mouseY
       counter = 1
     }
-    else if (shapemode == 'rect' && mouseIsPressed && counter == 1 && mouseX > (5 + ptslider.value()) && mouseX < windowWidth - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < windowHeight - (5 + ptslider.value())){
+    else if (shapemode == 'rect' && mouseIsPressed && counter == 1 && mouseX > (5 + ptslider.value()) && mouseX < 1700 - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < 900 - (5 + ptslider.value())){
       mousex2 = mouseX
       mousey2 = mouseY
       counter = 2
     }
     
-    if (shapemode == 'ellipse' && mouseIsPressed && counter == 0 && mouseX > (5 + ptslider.value()) && mouseX < windowWidth - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < windowHeight - (5 + ptslider.value())){
+    if (shapemode == 'ellipse' && mouseIsPressed && counter == 0 && mouseX > (5 + ptslider.value()) && mouseX < 1700 - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < 900 - (5 + ptslider.value())){
       mousex1 = mouseX
       mousey1 = mouseY
       counter = 1
     }
-    else if (shapemode == 'ellipse' && mouseIsPressed && counter == 1 && mouseX > (5 + ptslider.value()) && mouseX < windowWidth - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < windowHeight - (5 + ptslider.value())){
+    else if (shapemode == 'ellipse' && mouseIsPressed && counter == 1 && mouseX > (5 + ptslider.value()) && mouseX < 1700 - (5 + ptslider.value()) && mouseY > (60 + ptslider.value()) && mouseY < 900 - (5 + ptslider.value())){
       mousex2 = mouseX
       mousey2 = mouseY
       counter = 2
@@ -1102,11 +1101,11 @@ function keyPressed(){
       stroke(0)
       strokeWeight(1)
       fill(220)
-      rect(5, 60, windowWidth - 10, windowHeight - 65)
+      rect(5, 60, 1700 - 10, 900 - 65)
     }
 
     if (shapemode == "none" && outlinemode == 0 && key == "l"){
-      savedrawing = canvas.get(5, 60, windowWidth - 10, windowHeight - 65)
+      savedrawing = canvas.get(5, 60, 1700 - 10, 900 - 65)
       savedrawing.save("Untitled Drawing", "jpg")
     } 
 
